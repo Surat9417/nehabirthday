@@ -1,0 +1,169 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Happy Birthday BUGGI💖</title>
+  <style>
+    body {
+      margin: 0;
+      font-family: 'Poppins', sans-serif;
+      background: linear-gradient(to right, #ffdde1, #ee9ca7);
+      color: #fff;
+      text-align: center;
+      overflow-x: hidden;
+      position: relative;
+    }
+
+    h1 {
+      font-size: 3em;
+      margin-top: 30px;
+      animation: glow 2s infinite alternate;
+      z-index: 2;
+      position: relative;
+    }
+
+    @keyframes glow {
+      from { text-shadow: 0 0 10px #ff007f; }
+      to { text-shadow: 0 0 20px #ff4da6; }
+    }
+
+    .slideshow-container {
+      position: relative;
+      max-width: 600px;
+      margin: 40px auto;
+      border-radius: 20px;
+      overflow: hidden;
+      box-shadow: 0 8px 20px rgba(0,0,0,0.3);
+      z-index: 2;
+    }
+
+    .mySlides {
+      display: none;
+      width: 100%;
+      height: auto;
+    }
+
+    .mySlides img {
+      width: 100%;
+      border-radius: 20px;
+    }
+
+    .message {
+      font-size: 1.4em;
+      margin: 30px auto;
+      width: 70%;
+      line-height: 1.6em;
+      background: rgba(0,0,0,0.3);
+      padding: 20px;
+      border-radius: 15px;
+      z-index: 2;
+      position: relative;
+    }
+
+    footer {
+      margin-top: 20px;
+      font-size: 1.2em;
+      padding: 10px;
+      z-index: 2;
+      position: relative;
+    }
+
+    /* Floating hearts */
+    .heart {
+      position: fixed;
+      bottom: -10px;
+      color: #ff4da6;
+      font-size: 20px;
+      animation: floatUp 8s linear infinite;
+      opacity: 0.7;
+      z-index: 1;
+    }
+
+    @keyframes floatUp {
+      0% {
+        transform: translateY(0) scale(1);
+        opacity: 0.8;
+      }
+      50% {
+        opacity: 1;
+      }
+      100% {
+        transform: translateY(-100vh) scale(1.5);
+        opacity: 0;
+      }
+    }
+  </style>
+</head>
+<body>
+
+  <h1>🎉 Happiest Birthday Bugge💕</h1>
+
+  <div class="slideshow-container">
+    <div class="mySlides"><img src="pic1.jpg" alt="Neha"></div>
+    <div class="mySlides"><img src="pic2.jpg" alt="Neha"></div>
+    <div class="mySlides"><img src="pic3.jpg" alt="Neha"></div>
+    <div class="mySlides"><img src="pic4.jpg" alt="Neha"></div>
+    <div class="mySlides"><img src="pic5.jpg" alt="Neha"></div>
+    <div class="mySlides"><img src="pic6.jpg" alt="Neha"></div>
+    <div class="mySlides"><img src="pic7.jpg" alt="Neha"></div>
+    <div class="mySlides"><img src="pic8.jpg" alt="Neha"></div>
+    <div class="mySlides"><img src="pic9.jpg" alt="Neha"></div>
+  </div>
+
+  <div class="message">
+    My dearest Neha Yadav ❤️,<br>  
+    Madam ji on your special day, I just want to remind you how much you mean to me. <br> 
+    In past 4-5 months u became too important to me that my day ends and starts with you.<br>
+    i had never imagined that i would get this mad for you but everything and each day is <br>
+    worth with you, we love, crave for each other, fight with each other and then comes back<br>
+    to each other, i hope this never changes bugge.<br>
+    I know am not perfect and has many flaws but i promise i will try hard to be the perfect 
+    match for you and will amend my flaws.<br>
+    Just be with me bugge<br>
+    HAPPIEST BIRTHDAY MY LOVE(I WISH I COULD BE THERE WITH YOU AND HOLD IN YOU IN MY ARMS, never     mind will meet you soon bubu!)<br>
+ 
+    LOVE YOU JAAN MERI!💕  
+  </div>
+
+  <footer>
+    With all my love Jaan Meri💖
+  </footer>
+
+  <!-- Background Romantic Song -->
+  <audio controls autoplay loop>
+    <source src="TUMSEHI.mp3" type="audio/mpeg">
+    Your browser does not support the audio tag.
+  </audio>
+
+  <script>
+    // Slideshow
+    let slideIndex = 0;
+    showSlides();
+
+    function showSlides() {
+      let slides = document.getElementsByClassName("mySlides");
+      for (let i = 0; i < slides.length; i++) {
+        slides[i].style.display = "none";  
+      }
+      slideIndex++;
+      if (slideIndex > slides.length) { slideIndex = 1 }    
+      slides[slideIndex-1].style.display = "block";  
+      setTimeout(showSlides, 3000); // Change every 3s
+    }
+
+    // Floating hearts
+    function createHeart() {
+      const heart = document.createElement("div");
+      heart.classList.add("heart");
+      heart.innerHTML = "💖";
+      heart.style.left = Math.random() * 100 + "vw";
+      heart.style.fontSize = Math.random() * 20 + 20 + "px";
+      heart.style.animationDuration = (Math.random() * 3 + 5) + "s";
+      document.body.appendChild(heart);
+      setTimeout(() => heart.remove(), 8000);
+    }
+    setInterval(createHeart, 500);
+  </script>
+
+</body>
+</html>
